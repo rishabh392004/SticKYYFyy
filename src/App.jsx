@@ -7,7 +7,7 @@ import AppLayout from "./layout/app-layout"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Categories from "./pages/categories"
-import Favrouite from "./pages/favories"
+import Favorites from "./pages/favorites"
 import Home from "./pages/home"
 import Search from "./pages/search"
 import Gif from "./pages/single-gif"
@@ -30,7 +30,7 @@ children:[
   },
     {
     path:'/favorites',
-    element:<Favrouite/>
+    element:<Favorites/>
   },
     {
     path:'/:type/:slug',

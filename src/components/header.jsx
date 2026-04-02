@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { HiEllipsisVertical, HiMiniBars3BottomRight } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 import { GifState } from '../context/context';
+import GifSearch from './gif-search';
 
 const Header = () => {
   const [categories, setCategories] = useState([])
@@ -17,7 +18,8 @@ const Header = () => {
   }, [gf])
 
   return (
-    <nav className="flex items-center justify-between p-4 relative shadow-md">
+    <header>
+      <nav className="flex items-center justify-between p-4 relative mb-4">
 
       {/* Logo */}
       <Link to="/" className="flex gap-2 items-center">
@@ -78,8 +80,9 @@ const Header = () => {
           </div>
         </div>
       )}
-
-    </nav>
+      </nav>
+      <GifSearch/>
+    </header>
   )
 }
 
